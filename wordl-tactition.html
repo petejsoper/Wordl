@@ -488,7 +488,7 @@
     // ── Fetch word list ───────────────────────────────────────────────────────
     async function fetchWordList() {
         try {
-            const r = await fetch("https://raw.githubusercontent.com/tabatkins/wordle-list/main/words");
+            const r = await fetch("https://wordl-coral.vercel.app/api/wordle-words");
             if (!r.ok) throw new Error();
             const text = await r.text();
             masterWordList = text.split("\n").map(w => w.trim().toLowerCase()).filter(w => w.length === 5 && /^[a-z]+$/.test(w));
