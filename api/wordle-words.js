@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   try {
     const r = await fetch('https://raw.githubusercontent.com/tabatkins/wordle-list/main/words');
